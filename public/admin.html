@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Administración</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/script.js"></script>
+</head>
+<body>
+
+    <header>
+        <h1>Panel de Administración</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="catalogo.html">Catálogo</a></li>
+                <li><a href="carrito.html">Carrito</a></li>
+                <li><a href="pedidos.html">Pedidos</a></li>
+                <li><a href="historial.html">Historial</a></li>
+                <li><a href="admin.html">Administración</a></li>
+                <li><a href="soporte.html">Soporte</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Gestión de Productos</h2>
+            <form id="formProducto">
+                <input type="text" id="nombre" placeholder="Nombre" required>
+                <input type="text" id="descripcion" placeholder="Descripción" required>
+                <input type="number" id="precio" placeholder="Precio" required>
+                <input type="number" id="stock" placeholder="Stock" required>
+                <button type="submit">Agregar Producto</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>Lista de Productos</h2>
+            <div id="productos" class="grid-container"></div>
+        </section>
+    </main>
+
+</body>
+</html>
